@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /sign-in
+Disallow: /register
+Disallow: /api/
+
+Sitemap: https://www.norozz.com/sitemap.xml

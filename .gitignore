@@ -1,0 +1,35 @@
+# Dependencies
+node_modules
+Frontend/node_modules
+
+# Build artifacts
+dist
+Frontend/dist
+
+# Excluded by user request
+Norozz websites/
+Norozz website/
+implementation_plan.md
+
+# Environment variables & temporary files
+.env
+.env.local
+.env.*.local
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
