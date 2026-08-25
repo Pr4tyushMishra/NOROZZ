@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Smartphone, MapPin, Zap, ShieldCheck, Star } from 'lucide-react';
 import { SeoHead } from '@/components/common/SeoHead';
 import { Container } from '@/components/layout/Container';
-import { ASSETS } from '@/core/repositories/MockData';
+import { AppPhoneMockup } from '@/components/common/AppPhoneMockup';
 import { analytics } from '@/core/services/AnalyticsService';
 
 export const Download = () => {
@@ -100,15 +100,9 @@ export const Download = () => {
             </div>
           </div>
 
-          {/* Right Phone Showcase */}
-          <div className="lg:col-span-5 flex justify-center">
-            <div className="relative max-w-xs drop-shadow-2xl hover:scale-105 transition-transform duration-300">
-              <img
-                src={ASSETS.phoneMock}
-                alt="NOROZZ App Live Screen"
-                className="w-full h-auto rounded-3xl"
-              />
-            </div>
+          {/* Right Phone Showcase with Authentic NOROZZ Live Platform Screen */}
+          <div className="lg:col-span-5 flex justify-center py-4">
+            <AppPhoneMockup showFloatingBadges={true} />
           </div>
         </div>
 
