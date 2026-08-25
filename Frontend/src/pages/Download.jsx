@@ -102,7 +102,7 @@ export const Download = () => {
 
           {/* Right Phone Showcase with Authentic NOROZZ Live Platform Screen */}
           <div className="lg:col-span-5 flex justify-center py-4">
-            <AppPhoneMockup showFloatingBadges={true} />
+            <AppPhoneMockup />
           </div>
         </div>
 

@@ -22,7 +22,6 @@ import {
 import { ASSETS } from '@/core/repositories/MockData';
 
 export const AppPhoneMockup = ({ 
-  showFloatingBadges = true,
   className = '',
   eta = '8 mins',
   distance = '1.4 km',
@@ -49,64 +48,59 @@ export const AppPhoneMockup = ({
       {/* Ambient background glow behind phone */}
       <div className="absolute -inset-4 bg-gradient-to-tr from-teal-500/20 via-primary/25 to-emerald-400/20 rounded-full blur-2xl -z-10 opacity-75" />
 
-      {/* Floating Badge 1: Top Right - Live GPS Telemetry */}
-      {showFloatingBadges && (
-        <div className="hidden sm:flex absolute -top-4 -right-12 z-20 items-center gap-2.5 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-2xl shadow-xl border border-slate-100 text-left animate-bounce-subtle">
-          <div className="w-8 h-8 rounded-xl bg-teal-50 flex items-center justify-center text-teal-600 shrink-0">
-            <Navigation className="w-4 h-4 animate-pulse fill-teal-600" />
-          </div>
-          <div>
-            <div className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-              <p className="text-[11px] font-bold text-navy leading-none">Live GPS Tracking</p>
-            </div>
-            <p className="text-[10px] text-slate-500 mt-0.5">ETA: {eta} ({distance})</p>
-          </div>
-        </div>
-      )}
-
-      {/* Floating Badge 2: Bottom Left - Pro Verification */}
-      {showFloatingBadges && (
-        <div className="hidden sm:flex absolute -bottom-4 -left-10 z-20 items-center gap-2.5 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-2xl shadow-xl border border-slate-100 text-left">
-          <div className="w-8 h-8 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 shrink-0">
-            <ShieldCheck className="w-4 h-4" />
-          </div>
-          <div>
-            <p className="text-[11px] font-bold text-navy leading-none">100% Verified Pro</p>
-            <p className="text-[10px] text-slate-500 mt-0.5">Background & Skill Certified</p>
-          </div>
-        </div>
-      )}
-
-      {/* Phone Hardware Container */}
-      <div className="relative w-[300px] sm:w-[320px] bg-[#0c131a] p-2.5 sm:p-3 rounded-[46px] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.6),0_0_30px_rgba(13,148,136,0.15)] border-4 border-[#1f2937]/90 ring-1 ring-white/20 transition-all duration-300">
+      {/* iPhone 16 Pro Titanium Hardware Chassis */}
+      <div className="relative w-[310px] sm:w-[330px] bg-gradient-to-b from-[#3a3f47] via-[#22262c] to-[#181a1f] p-[10px] rounded-[52px] shadow-[0_30px_70px_-15px_rgba(0,0,0,0.7),0_10px_30px_-5px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.3)] border border-[#4b525d]/60 ring-1 ring-black/80 transition-all duration-300">
         
-        {/* Hardware Side Buttons */}
-        <div className="absolute -left-[7px] top-24 w-[3px] h-8 bg-slate-700 rounded-l-sm" />
-        <div className="absolute -left-[7px] top-36 w-[3px] h-12 bg-slate-700 rounded-l-sm" />
-        <div className="absolute -left-[7px] top-52 w-[3px] h-12 bg-slate-700 rounded-l-sm" />
-        <div className="absolute -right-[7px] top-32 w-[3px] h-16 bg-slate-700 rounded-r-sm" />
+        {/* Antenna Bands (Top & Bottom on Titanium Frame) */}
+        <div className="absolute -left-[1px] top-20 w-[2px] h-2 bg-[#121417]/80 pointer-events-none" />
+        <div className="absolute -right-[1px] top-20 w-[2px] h-2 bg-[#121417]/80 pointer-events-none" />
+        <div className="absolute -left-[1px] bottom-20 w-[2px] h-2 bg-[#121417]/80 pointer-events-none" />
+        <div className="absolute -right-[1px] bottom-20 w-[2px] h-2 bg-[#121417]/80 pointer-events-none" />
 
-        {/* Screen Bezel & Surface */}
-        <div className="relative bg-[#07131D] w-full rounded-[38px] overflow-hidden text-slate-100 font-sans border border-slate-800/80 shadow-inner flex flex-col justify-between" style={{ minHeight: '620px' }}>
+        {/* iPhone Left Buttons: Action Button + Volume Up + Volume Down */}
+        <div className="absolute -left-[4px] top-[95px] w-[3px] h-6 bg-gradient-to-b from-slate-400 to-slate-600 rounded-l-sm shadow-sm" title="Action Button" />
+        <div className="absolute -left-[4px] top-[135px] w-[3px] h-12 bg-gradient-to-b from-slate-400 to-slate-600 rounded-l-sm shadow-sm" title="Volume Up" />
+        <div className="absolute -left-[4px] top-[195px] w-[3px] h-12 bg-gradient-to-b from-slate-400 to-slate-600 rounded-l-sm shadow-sm" title="Volume Down" />
+
+        {/* iPhone Right Buttons: Power / Siri Button + Camera Control */}
+        <div className="absolute -right-[4px] top-[140px] w-[3px] h-18 bg-gradient-to-b from-slate-400 to-slate-600 rounded-r-sm shadow-sm" title="Power Button" />
+        <div className="absolute -right-[3px] bottom-[150px] w-[2px] h-10 bg-slate-500/80 rounded-r-sm shadow-sm" title="Camera Control" />
+
+        {/* Top Speaker Earpiece Slit */}
+        <div className="absolute top-[4px] left-1/2 -translate-x-1/2 w-12 h-[3px] bg-[#111] rounded-full z-40" />
+
+        {/* OLED Screen Bezel & Surface (Ultra-thin uniform 3.5mm iPhone bezel) */}
+        <div className="relative bg-[#07131D] w-full rounded-[44px] overflow-hidden text-slate-100 font-sans border-[3px] border-black shadow-[inset_0_0_8px_rgba(0,0,0,0.8)] flex flex-col justify-between" style={{ minHeight: '630px' }}>
           
+          {/* Diagonal Glass Sheen Reflection Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.03] to-transparent pointer-events-none z-30" />
+
           {/* 1. iOS Status Bar & Dynamic Island */}
-          <div className="relative z-30 pt-2.5 px-6 flex items-center justify-between text-[11px] font-semibold text-slate-200">
-            <span>9:41</span>
+          <div className="relative z-30 pt-3 px-6 flex items-center justify-between text-[11px] font-semibold text-slate-200">
+            {/* iOS Time */}
+            <span className="font-semibold tracking-tight text-[12px] pl-1 text-white">9:41</span>
             
-            {/* Dynamic Island */}
-            <div className="w-26 h-5 bg-black rounded-full flex items-center justify-between px-2 text-[9px] shadow-sm border border-white/5">
-              <div className="flex items-center gap-1.5 text-teal-400">
-                <img src={ASSETS.logo} alt="Logo" className="w-3 h-3 object-contain" />
-                <span className="text-[8px] font-bold tracking-tight text-white">NOROZZ</span>
+            {/* Signature iPhone Dynamic Island */}
+            <div className="w-[100px] h-[26px] bg-black rounded-full flex items-center justify-between px-3 shadow-md border border-white/5 select-none">
+              {/* FaceID Sensor Cutout (Left) */}
+              <div className="w-2 h-2 rounded-full bg-[#0a0a0a]" />
+              {/* Front Camera Lens with Blue Anti-Reflective Optics Ring (Right) */}
+              <div className="w-2.5 h-2.5 rounded-full bg-[#060e18] ring-1 ring-slate-800 flex items-center justify-center">
+                <div className="w-1 h-1 rounded-full bg-[#0b243b]" />
               </div>
-              <div className="w-2 h-2 rounded-full bg-[#111] ring-1 ring-teal-500/40" />
             </div>
 
-            <div className="flex items-center gap-1.5 text-slate-300">
-              <Signal className="w-3 h-3" />
-              <Wifi className="w-3 h-3" />
-              <Battery className="w-3.5 h-3.5 text-emerald-400 fill-emerald-400" />
+            {/* iOS Signal, Wi-Fi, and Battery Status Icons */}
+            <div className="flex items-center gap-1.5 text-slate-200 pr-1">
+              <Signal className="w-3.5 h-3.5" />
+              <Wifi className="w-3.5 h-3.5" />
+              {/* Authentic iOS Battery Icon */}
+              <div className="flex items-center">
+                <div className="w-5 h-2.5 rounded-[3px] border border-white/80 p-[1px] flex items-center">
+                  <div className="w-full h-full bg-emerald-400 rounded-[1.5px]" />
+                </div>
+                <div className="w-[1.5px] h-1 bg-white/80 rounded-r-[1px] -ml-[0.5px]" />
+              </div>
             </div>
           </div>
 
@@ -160,41 +154,39 @@ export const AppPhoneMockup = ({
           </div>
 
           {/* 4. Realistic Map Simulation Screen */}
-          <div className="relative flex-1 bg-[#101c26] overflow-hidden min-h-[190px]">
+          <div className="relative flex-1 bg-[#101c26] overflow-hidden min-h-[210px]">
             {/* Vector Map Canvas Graphics */}
-            <svg className="w-full h-full absolute inset-0 opacity-80" viewBox="0 0 320 220" fill="none">
+            <svg className="w-full h-full absolute inset-0 opacity-80" viewBox="0 0 300 210" preserveAspectRatio="none" fill="none">
               {/* Map Background Blocks / City grid */}
-              <rect width="320" height="220" fill="#0d1b2a" />
+              <rect width="300" height="210" fill="#0d1b2a" />
               
               {/* City Blocks */}
-              <rect x="15" y="15" width="60" height="45" rx="4" fill="#15263a" />
-              <rect x="85" y="15" width="80" height="45" rx="4" fill="#15263a" />
-              <rect x="175" y="15" width="65" height="45" rx="4" fill="#15263a" />
-              <rect x="250" y="15" width="55" height="45" rx="4" fill="#15263a" />
+              <rect x="15" y="15" width="55" height="40" rx="4" fill="#15263a" />
+              <rect x="80" y="15" width="70" height="40" rx="4" fill="#15263a" />
+              <rect x="170" y="15" width="40" height="40" rx="4" fill="#15263a" />
+              <rect x="230" y="15" width="55" height="40" rx="4" fill="#15263a" />
               
-              <rect x="15" y="70" width="50" height="60" rx="4" fill="#15263a" />
+              <rect x="15" y="75" width="65" height="55" rx="4" fill="#15263a" />
               {/* City Park (Green tint) */}
-              <rect x="75" y="70" width="70" height="60" rx="6" fill="#0e3436" stroke="#134e4a" strokeWidth="1" />
-              <text x="85" y="103" fill="#2dd4bf" fontSize="7" fontWeight="bold" opacity="0.7">100ft Park</text>
+              <rect x="90" y="75" width="60" height="55" rx="6" fill="#0e3436" stroke="#134e4a" strokeWidth="1" />
+              <text x="96" y="105" fill="#2dd4bf" fontSize="7" fontWeight="bold" opacity="0.8">100ft Park</text>
               
-              <rect x="155" y="70" width="85" height="60" rx="4" fill="#15263a" />
-              <rect x="250" y="70" width="55" height="60" rx="4" fill="#15263a" />
+              <rect x="170" y="75" width="115" height="55" rx="4" fill="#15263a" />
               
-              <rect x="15" y="140" width="70" height="70" rx="4" fill="#15263a" />
-              <rect x="95" y="140" width="60" height="70" rx="4" fill="#15263a" />
-              <rect x="165" y="140" width="75" height="70" rx="4" fill="#15263a" />
-              <rect x="250" y="140" width="55" height="70" rx="4" fill="#15263a" />
+              <rect x="15" y="155" width="65" height="45" rx="4" fill="#15263a" />
+              <rect x="90" y="155" width="60" height="45" rx="4" fill="#15263a" />
+              <rect x="170" y="155" width="115" height="45" rx="4" fill="#15263a" />
 
-              {/* Road Network (Lighter grid lines) */}
-              <path d="M 0 65 L 320 65" stroke="#223954" strokeWidth="10" />
-              <path d="M 0 135 L 320 135" stroke="#223954" strokeWidth="12" />
-              <path d="M 70 0 L 70 220" stroke="#223954" strokeWidth="8" />
-              <path d="M 150 0 L 150 220" stroke="#223954" strokeWidth="10" />
-              <path d="M 245 0 L 245 220" stroke="#223954" strokeWidth="8" />
+              {/* Road Network Grid Lines */}
+              <path d="M 0 65 L 300 65" stroke="#223954" strokeWidth="12" />
+              <path d="M 0 145 L 300 145" stroke="#223954" strokeWidth="12" />
+              <path d="M 80 0 L 80 210" stroke="#223954" strokeWidth="8" />
+              <path d="M 160 0 L 160 210" stroke="#223954" strokeWidth="12" />
+              <path d="M 230 0 L 230 210" stroke="#223954" strokeWidth="8" />
 
               {/* Street Names */}
-              <text x="160" y="63" fill="#64748b" fontSize="6" fontWeight="bold">100 FEET ROAD</text>
-              <text x="15" y="132" fill="#64748b" fontSize="6" fontWeight="bold">12TH MAIN</text>
+              <text x="175" y="62" fill="#64748b" fontSize="6" fontWeight="bold">100 FEET ROAD</text>
+              <text x="15" y="142" fill="#64748b" fontSize="6" fontWeight="bold">12TH MAIN</text>
 
               {/* Active Route Path Glowing Gradient */}
               <defs>
@@ -209,56 +201,63 @@ export const AppPhoneMockup = ({
                 </filter>
               </defs>
 
-              {/* Glowing Route Line */}
+              {/* Glowing Ambient Route Line (Centered exactly from Rajesh at (90,145) to Home at (220,65)) */}
               <path 
-                d="M 50 165 L 70 165 L 70 135 L 150 135 L 150 65 L 210 65" 
+                d="M 90 145 L 160 145 L 160 65 L 220 65" 
                 stroke="#0d9488" 
-                strokeWidth="7" 
+                strokeWidth="8" 
                 strokeLinecap="round" 
                 strokeLinejoin="round" 
                 opacity="0.4"
                 filter="url(#routeGlow)"
               />
               <path 
-                d="M 50 165 L 70 165 L 70 135 L 150 135 L 150 65 L 210 65" 
+                d="M 90 145 L 160 145 L 160 65 L 220 65" 
                 stroke="url(#routeGradient)" 
-                strokeWidth="4" 
+                strokeWidth="4.5" 
                 strokeLinecap="round" 
                 strokeLinejoin="round" 
               />
               {/* Dash flow animation effect */}
               <path 
-                d="M 50 165 L 70 165 L 70 135 L 150 135 L 150 65 L 210 65" 
+                d="M 90 145 L 160 145 L 160 65 L 220 65" 
                 stroke="#ffffff" 
                 strokeWidth="2" 
                 strokeLinecap="round" 
-                strokeDasharray="4 8"
+                strokeLinejoin="round"
+                strokeDasharray="4 6"
                 className="animate-pulse"
-                opacity="0.8"
+                opacity="0.9"
               />
             </svg>
 
-            {/* Destination Pin (User's Home) */}
-            <div className="absolute top-[52px] left-[200px] -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center">
+            {/* Destination Pin (User's Home at x=220, y=65) */}
+            <div 
+              className="absolute z-10 flex flex-col items-center pointer-events-none"
+              style={{ left: '73.33%', top: '30.95%', transform: 'translate(-50%, -50%)' }}
+            >
               <div className="px-2 py-0.5 rounded-md bg-navy text-[8px] font-bold text-white shadow-lg border border-teal-400/40 mb-1 flex items-center gap-1">
                 <span>📍 My Home</span>
               </div>
               <div className="relative">
                 <span className="animate-ping absolute -inset-1 rounded-full bg-teal-400 opacity-60"></span>
-                <div className="w-5 h-5 rounded-full bg-teal-500 border-2 border-white flex items-center justify-center text-white shadow-md">
-                  <Home className="w-2.5 h-2.5" />
+                <div className="w-6 h-6 rounded-full bg-teal-500 border-2 border-white flex items-center justify-center text-white shadow-md">
+                  <Home className="w-3 h-3" />
                 </div>
               </div>
             </div>
 
-            {/* Moving Pro Pin (Specialist GPS Location) */}
-            <div className="absolute top-[135px] left-[110px] -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center">
-              <div className="px-2 py-0.5 rounded-full bg-emerald-600 text-[8px] font-bold text-white shadow-lg border border-emerald-300/40 mb-1 flex items-center gap-1 animate-pulse">
+            {/* Moving Pro Pin (Rajesh at x=90, y=145) */}
+            <div 
+              className="absolute z-10 flex flex-col items-center pointer-events-none"
+              style={{ left: '30%', top: '69.05%', transform: 'translate(-50%, -50%)' }}
+            >
+              <div className="px-2 py-0.5 rounded-full bg-emerald-600 text-[8px] font-bold text-white shadow-lg border border-emerald-300/40 mb-1 flex items-center gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping" />
                 <span>Rajesh (Pro) • 32 km/h</span>
               </div>
               <div className="relative">
-                <span className="animate-ping absolute -inset-2 rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="animate-ping absolute -inset-1.5 rounded-full bg-emerald-400 opacity-75"></span>
                 <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-teal-600 to-emerald-400 p-0.5 shadow-xl border-2 border-white">
                   <img 
                     src={ASSETS.registerPro} 
@@ -272,7 +271,7 @@ export const AppPhoneMockup = ({
               </div>
             </div>
 
-            {/* Map Overlay Pill: Distance & Battery Safety */}
+            {/* Map Overlay Pill: Speed */}
             <div className="absolute top-2 left-2 z-10 bg-navy/90 backdrop-blur-md px-2 py-1 rounded-lg border border-white/10 text-[8px] text-slate-200 flex items-center gap-1.5 shadow-md">
               <Clock className="w-2.5 h-2.5 text-teal-400" />
               <span>Speed: 32 km/h • GPS Active</span>
@@ -381,8 +380,8 @@ export const AppPhoneMockup = ({
             </div>
           </div>
 
-          {/* iPhone Home Indicator Line */}
-          <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-28 h-1 bg-slate-900/60 rounded-full z-30 pointer-events-none" />
+          {/* Authentic iPhone Home Indicator Bar */}
+          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-[4px] bg-slate-900/90 rounded-full z-30 pointer-events-none shadow-sm" />
 
         </div>
       </div>

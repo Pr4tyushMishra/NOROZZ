@@ -1,4 +1,5 @@
 import React from 'react';
+import { Navigation, ShieldCheck } from 'lucide-react';
 import { analytics } from '@/core/services/AnalyticsService';
 import { Container } from '@/components/layout/Container';
 import { AppPhoneMockup } from '@/components/common/AppPhoneMockup';
@@ -60,11 +61,34 @@ export const AppPromoBand = () => {
                 </div>
               </a>
             </div>
+
+            {/* Clean Feature Highlights */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 border-t border-slate-200/80">
+              <div className="flex items-center gap-3 p-3 rounded-2xl bg-white/80 backdrop-blur-sm border border-teal-100 shadow-sm">
+                <div className="w-9 h-9 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center shrink-0">
+                  <Navigation className="w-4 h-4 fill-teal-600 animate-pulse" />
+                </div>
+                <div>
+                  <h4 className="text-xs font-bold text-navy">Live GPS Tracking</h4>
+                  <p className="text-[11px] text-slate-500">Real-time arrival radar & ETA</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3 p-3 rounded-2xl bg-white/80 backdrop-blur-sm border border-teal-100 shadow-sm">
+                <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                  <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                </div>
+                <div>
+                  <h4 className="text-xs font-bold text-navy">100% Verified Pros</h4>
+                  <p className="text-[11px] text-slate-500">Police & skill certified</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Right Phone Mockup with Authentic NOROZZ Live Platform Screen */}
+          {/* Right Phone Mockup with Clean Screen Showcase */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end py-4">
-            <AppPhoneMockup showFloatingBadges={true} />
+            <AppPhoneMockup />
           </div>
         </div>
       </Container>
