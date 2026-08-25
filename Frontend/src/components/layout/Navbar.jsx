@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X, User, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui';
+import { ASSETS } from '@/core/repositories/MockData';
 import { authService } from '@/core/services/AuthService';
 import { eventBus } from '@/core/services/EventBus';
 import { analytics } from '@/core/services/AnalyticsService';
@@ -26,8 +27,9 @@ export const Navbar = () => {
   const navLinks = [
     { label: 'Home', path: '/' },
     { label: 'Services', path: '/services' },
-    { label: 'About', path: '/about' },
     { label: 'How It Works', path: '/how-it-works' },
+    { label: 'About', path: '/about' },
+    { label: 'Offers', path: '/offers' },
     { label: 'Contact', path: '/contact' },
   ];
 
@@ -43,13 +45,12 @@ export const Navbar = () => {
     <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 transition-shadow duration-200">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Brand Logo */}
-        <Link to="/" className="flex items-center gap-2.5 group">
-          <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white shadow-sm group-hover:bg-primary-dark transition-colors">
-            <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
-              <path d="M12 3L3 10.5V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V10.5L12 3Z" fill="white" />
-              <path d="M10 21V13H14V21H10Z" fill="#0D9488" />
-            </svg>
-          </div>
+        <Link to="/" className="flex items-center gap-3 group">
+          <img
+            src={ASSETS.logo}
+            alt="Norozz Logo"
+            className="w-10 h-10 rounded-xl object-contain drop-shadow-sm group-hover:scale-105 transition-transform"
+          />
           <span className="text-2xl font-extrabold tracking-tight text-navy font-heading">
             Norozz
           </span>

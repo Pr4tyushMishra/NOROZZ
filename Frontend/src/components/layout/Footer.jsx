@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ASSETS } from '@/core/repositories/MockData';
 import { analytics } from '@/core/services/AnalyticsService';
 
 export const Footer = () => {
@@ -13,13 +14,12 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-16">
           {/* Col 1: Brand & Intro */}
           <div className="lg:col-span-4 space-y-4">
-            <Link to="/" className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-white">
-                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                  <path d="M12 3L3 10.5V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V10.5L12 3Z" fill="white" />
-                  <path d="M10 21V13H14V21H10Z" fill="#0D9488" />
-                </svg>
-              </div>
+            <Link to="/" className="flex items-center gap-3">
+              <img
+                src={ASSETS.logo}
+                alt="Norozz Logo"
+                className="w-10 h-10 rounded-xl object-contain shadow-sm"
+              />
               <span className="text-2xl font-extrabold tracking-tight text-white font-heading">
                 Norozz
               </span>

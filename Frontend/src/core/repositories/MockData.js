@@ -1,4 +1,5 @@
 import heroImg from '@/assets/images/hero.png';
+import logoImg from '@/assets/images/logo.png';
 import cleanerImg from '@/assets/images/guarantee_cleaner.png';
 import phoneMockImg from '@/assets/images/app_phone_mock.png';
 import kitchenImg from '@/assets/images/signin_kitchen.png';
@@ -18,6 +19,7 @@ import badgeImg from '@/assets/images/trust_badge.png';
 import mapImg from '@/assets/images/contact_map.png';
 
 export const ASSETS = {
+  logo: logoImg,
   hero: heroImg,
   guaranteeCleaner: cleanerImg,
   phoneMock: phoneMockImg,
