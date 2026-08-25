@@ -28,7 +28,7 @@ export const Cities = () => {
     <div className="min-h-screen bg-surface-soft/40 py-12 md:py-16">
       <SeoHead
         title="Cities Covered Across India — NOROZZ"
-        description="NOROZZ home services are live across 50+ major cities in India including Bangalore, Mumbai, Delhi NCR, Hyderabad, Chennai and Pune."
+        description="NOROZZ home services are live across Bangalore, Mumbai, Delhi NCR, Hyderabad, Chennai and Pune."
       />
 
       <Container>
@@ -37,7 +37,7 @@ export const Cities = () => {
             City Availability Explorer
           </span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-navy font-heading mt-1">
-            Now live in 50+ cities across India
+            Now live across 6 major hubs in India
           </h1>
           <p className="text-sm sm:text-base text-slate-muted mt-2">
             Find certified plumbers, electricians, house cleaners, and handymen near your locality.

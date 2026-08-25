@@ -2,6 +2,7 @@ export * from './HeroSection';
 export * from './CategoryGrid';
 export * from './TrustPillars';
 export * from './GuaranteeBanner';
+export * from './FeaturedServicesSection';
 export * from './TestimonialsCarousel';
 export * from './AppPromoBand';
 export * from './PartnerBand';

@@ -45,7 +45,7 @@ export const Legal = () => {
           <section className="space-y-2">
             <h2 className="text-xl font-bold text-navy font-heading">1. Introduction & Overview</h2>
             <p>
-              Welcome to NOROZZ Technologies Inc. ("NOROZZ", "we", "our", or "us"). By accessing or utilizing our public discovery website, mobile applications, or connected home service marketplace, you agree to comply with and be bound by these legal terms.
+              Welcome to NOROZZ CARE PRIVATE LIMITED (CIN: U63120HR2026PTC147903, "NOROZZ", "we", "our", or "us"). Registered office: 5th Floor, M/S DLF Bldg 2, Cyber Green Part-1, Sec 25, DLF QE, Gurgaon, Haryana, India, 122002. By accessing or utilizing our public discovery website, mobile applications, or connected home service marketplace, you agree to comply with and be bound by these legal terms.
             </p>
           </section>
 
@@ -71,9 +71,9 @@ export const Legal = () => {
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-xl font-bold text-navy font-heading">5. Contact Legal Desk</h2>
+            <h2 className="text-xl font-bold text-navy font-heading">5. Contact Legal Desk & Corporate Office</h2>
             <p>
-              For legal inquiries or compliance verification, please contact our counsel at <a href="mailto:legal@norozz.com" className="text-primary underline">legal@norozz.com</a>.
+              For legal inquiries, corporate governance, or compliance verification, please write to us at <a href="mailto:NOROZZCARE@GMAIL.COM" className="text-primary underline">NOROZZCARE@GMAIL.COM</a> or call our official desk at <a href="tel:8860036008" className="text-primary font-bold">8860036008</a>.
             </p>
           </section>
         </div>

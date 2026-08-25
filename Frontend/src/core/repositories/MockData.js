@@ -1,4 +1,6 @@
-import heroImg from '@/assets/images/hero.png';
+import heroImg from '@/assets/images/hero1.png';
+import hero1Img from '@/assets/images/hero1.png';
+import heroCutoutImg from '@/assets/images/herosection.png';
 import logoImg from '@/assets/images/logo.png';
 import cleanerImg from '@/assets/images/guarantee_cleaner.png';
 import phoneMockImg from '@/assets/images/app_phone_mock.png';
@@ -18,9 +20,27 @@ import aditiImg from '@/assets/images/team_aditi.png';
 import badgeImg from '@/assets/images/trust_badge.png';
 import mapImg from '@/assets/images/contact_map.png';
 
+export const SUPPORT_CONTACTS = {
+  companyName: 'NOROZZ CARE PRIVATE LIMITED',
+  cin: 'U63120HR2026PTC147903',
+  mainHelpline: { label: 'Main Helpline', number: '8796612243', icon: '☎️', tel: 'tel:8796612243', badge: '24/7 Support' },
+  booking: { label: 'Booking Desk', number: '8796612244', icon: '📞', tel: 'tel:8796612244', badge: 'Instant Booking' },
+  emergency: { label: 'Emergency Support', number: '8796612245', icon: '🚑', tel: 'tel:8796612245', badge: 'Priority SLA' },
+  whatsapp: { label: 'WhatsApp Support', number: '8796612246', icon: '💬', link: 'https://wa.me/918796612246', badge: 'Chat Instant' },
+  provider: { label: 'Provider / Partner Support', number: '8796612247', icon: '🏥', tel: 'tel:8796612247', badge: 'Partner Care' },
+  directContact: { label: 'Direct Official Line', number: '8860036008', icon: '📱', tel: 'tel:8860036008', badge: 'Official Line' },
+  email: 'info@noroz.com',
+  officialEmail: 'NOROZZCARE@GMAIL.COM',
+  address: '5th Floor, M/S DLF Bldg 2, Cyber Green Part-1, Sec 25, DLF QE, Gurgaon, Haryana, India, 122002',
+  googleMapsEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.2185250428585!2d77.08677767550186!3d28.49089767574215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d193895e69e45%3A0x6a0a03bb69752fa9!2sDLF%20Cyber%20Green!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin',
+  googleMapsLink: 'https://maps.google.com/?q=DLF+Cyber+Green+Building+2+Sector+25+Gurgaon+Haryana+122002'
+};
+
 export const ASSETS = {
   logo: logoImg,
   hero: heroImg,
+  hero1: hero1Img,
+  heroCutout: heroCutoutImg,
   guaranteeCleaner: cleanerImg,
   phoneMock: phoneMockImg,
   kitchen: kitchenImg,
@@ -217,7 +237,7 @@ export const SEED_TESTIMONIALS = [
 export const SEED_TEAM = [
   { id: 'lead-1', name: 'Sameer Shah', role: 'Co-Founder & CEO', image: sameerImg, bio: 'Ex-Operations leader at top logistics platforms, driving standard of living improvements.' },
   { id: 'lead-2', name: 'Priya Patel', role: 'Head of Quality Assurance', image: priyaImg, bio: 'Pioneered our 5-stage background check and pro certification framework.' },
-  { id: 'lead-3', name: 'Rahul Nair', role: 'VP Operations & Logistics', image: rahulImg, bio: 'Oversees 50+ city hubs and ensures on-time pro arrival SLAs.' },
+  { id: 'lead-3', name: 'Rahul Nair', role: 'VP Operations & Logistics', image: rahulImg, bio: 'Oversees city hubs and ensures on-time pro arrival SLAs.' },
   { id: 'lead-4', name: 'Aditi Rao', role: 'Head of Customer Success', image: aditiImg, bio: 'Championing 100% money-back guarantee and zero-friction resolution.' }
 ];
 
@@ -255,12 +275,12 @@ export const SEED_FAQS = [
 ];
 
 export const SEED_CITIES = [
-  { id: 'c-blr', name: 'Bangalore', slug: 'bangalore', state: 'Karnataka', activePros: 8500, rating: 4.9, isHub: true },
-  { id: 'c-mum', name: 'Mumbai', slug: 'mumbai', state: 'Maharashtra', activePros: 7200, rating: 4.8, isHub: true },
-  { id: 'c-del', name: 'Delhi NCR', slug: 'delhi-ncr', state: 'Delhi', activePros: 9100, rating: 4.8, isHub: true },
-  { id: 'c-hyd', name: 'Hyderabad', slug: 'hyderabad', state: 'Telangana', activePros: 4300, rating: 4.9, isHub: false },
-  { id: 'c-che', name: 'Chennai', slug: 'chennai', state: 'Tamil Nadu', activePros: 3800, rating: 4.7, isHub: false },
-  { id: 'c-pun', name: 'Pune', slug: 'pune', state: 'Maharashtra', activePros: 3200, rating: 4.8, isHub: false }
+  { id: 'c-del', name: 'Delhi NCR', slug: 'delhi-ncr', state: 'Delhi', activePros: 160, rating: 4.9, isHub: true },
+  { id: 'c-blr', name: 'Bangalore', slug: 'bangalore', state: 'Karnataka', activePros: 140, rating: 4.9, isHub: true },
+  { id: 'c-mum', name: 'Mumbai', slug: 'mumbai', state: 'Maharashtra', activePros: 110, rating: 4.8, isHub: true },
+  { id: 'c-hyd', name: 'Hyderabad', slug: 'hyderabad', state: 'Telangana', activePros: 65, rating: 4.9, isHub: false },
+  { id: 'c-che', name: 'Chennai', slug: 'chennai', state: 'Tamil Nadu', activePros: 50, rating: 4.8, isHub: false },
+  { id: 'c-pun', name: 'Pune', slug: 'pune', state: 'Maharashtra', activePros: 45, rating: 4.8, isHub: false }
 ];
 
 export const SEED_OFFERS = [

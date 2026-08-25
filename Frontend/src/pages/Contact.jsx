@@ -17,14 +17,15 @@ export const Contact = () => {
     description: 'Get in touch with NOROZZ support, operations or corporate leadership team.',
     mainEntity: {
       '@type': 'Organization',
-      name: 'NOROZZ Technologies Inc.',
-      telephone: '+91-1800-419-4444',
-      email: 'support@norozz.com',
+      name: 'NOROZZ CARE PRIVATE LIMITED',
+      telephone: '+91-8860036008',
+      email: 'NOROZZCARE@GMAIL.COM',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '4th Floor, Prestige Tech Park, Outer Ring Road',
-        addressLocality: 'Bangalore',
-        postalCode: '560103',
+        streetAddress: '5th Floor, M/S DLF Bldg 2, Cyber Green Part-1, Sec 25, DLF QE',
+        addressLocality: 'Gurgaon',
+        addressRegion: 'Haryana',
+        postalCode: '122002',
         addressCountry: 'IN',
       },
     },
@@ -33,8 +34,8 @@ export const Contact = () => {
   return (
     <div className="min-h-screen bg-surface">
       <SeoHead
-        title="Contact Us & 24/7 Support Desk — NOROZZ"
-        description="Get in touch with support, operations or corporate leadership team instantly. Toll-free helpline 1800-419-4444, email support@norozz.com or submit an inquiry."
+        title="Contact Us & Support Desk — NOROZZ"
+        description="Get in touch with support, operations or customer care instantly. Main Helpline: 8796612243, Booking: 8796612244, Emergency: 8796612245, WhatsApp: 8796612246, Email: info@noroz.com."
         schema={contactSchema}
       />
 

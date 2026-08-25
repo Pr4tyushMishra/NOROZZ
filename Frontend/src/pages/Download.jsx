@@ -52,7 +52,7 @@ export const Download = () => {
             </h1>
 
             <p className="text-base sm:text-lg text-slate-text leading-relaxed max-w-xl">
-              Download the NOROZZ app on Google Play or the App Store. Join over 10M+ satisfied households who book, manage, and rate home services with effortless convenience.
+              Download the NOROZZ app on Google Play or the App Store. Join thousands of satisfied households who book, manage, and rate home services with effortless convenience.
             </p>
 
             <div className="flex items-center gap-2 text-sm text-slate-text font-semibold">
@@ -61,7 +61,7 @@ export const Download = () => {
                   <Star key={i} className="w-4 h-4 fill-amber-400" />
                 ))}
               </div>
-              <span>4.8/5 Rating from 250,000+ app store reviews</span>
+              <span>4.9/5 Rating from 5,000+ app store reviews</span>
             </div>
 
             {/* Store Buttons */}

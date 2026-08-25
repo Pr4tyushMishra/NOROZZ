@@ -79,19 +79,19 @@ export const About = () => {
         <Container>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="space-y-1">
-              <div className="text-4xl sm:text-5xl font-extrabold font-heading tracking-tight">50+</div>
+              <div className="text-4xl sm:text-5xl font-extrabold font-heading tracking-tight">5+</div>
               <div className="text-xs sm:text-sm text-teal-100 font-medium uppercase tracking-wider">Cities Covered</div>
             </div>
             <div className="space-y-1">
-              <div className="text-4xl sm:text-5xl font-extrabold font-heading tracking-tight">25,000+</div>
+              <div className="text-4xl sm:text-5xl font-extrabold font-heading tracking-tight">500+</div>
               <div className="text-xs sm:text-sm text-teal-100 font-medium uppercase tracking-wider">Verified Partners</div>
             </div>
             <div className="space-y-1">
-              <div className="text-4xl sm:text-5xl font-extrabold font-heading tracking-tight">10M+</div>
+              <div className="text-4xl sm:text-5xl font-extrabold font-heading tracking-tight">5,000+</div>
               <div className="text-xs sm:text-sm text-teal-100 font-medium uppercase tracking-wider">Happy Deliveries</div>
             </div>
             <div className="space-y-1">
-              <div className="text-4xl sm:text-5xl font-extrabold font-heading tracking-tight">4.8/5</div>
+              <div className="text-4xl sm:text-5xl font-extrabold font-heading tracking-tight">4.9/5</div>
               <div className="text-xs sm:text-sm text-teal-100 font-medium uppercase tracking-wider">User Star Rating</div>
             </div>
           </div>

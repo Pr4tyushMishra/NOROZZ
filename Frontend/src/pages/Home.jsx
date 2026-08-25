@@ -5,7 +5,7 @@ import {
   HeroSection,
   CategoryGrid,
   TrustPillars,
-  GuaranteeBanner,
+  FeaturedServicesSection,
   TestimonialsCarousel,
   AppPromoBand,
   PartnerBand,
@@ -35,7 +35,7 @@ export const Home = () => {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'NOROZZ Technologies Inc.',
+    name: 'NOROZZ CARE PRIVATE LIMITED',
     url: 'https://www.norozz.com',
     logo: 'https://www.norozz.com/favicon.svg',
     description: 'On-demand verified home services marketplace.',
@@ -64,9 +64,9 @@ export const Home = () => {
         <TrustPillars />
       </SafeComponent>
 
-      {/* 4. 100% Quality Assured Guarantee Banner */}
-      <SafeComponent name="GuaranteeBanner">
-        <GuaranteeBanner />
+      {/* 4. Featured Top Services Showcase (Replacing peace of mind banner) */}
+      <SafeComponent name="FeaturedServicesSection">
+        <FeaturedServicesSection />
       </SafeComponent>
 
       {/* 5. "Loved by homes across India" Testimonials */}

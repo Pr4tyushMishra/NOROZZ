@@ -13,7 +13,7 @@ export const Footer = () => {
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-16">
           {/* Col 1: Brand & Intro */}
-          <div className="lg:col-span-4 space-y-4">
+          <div className="lg:col-span-4 space-y-4 text-left">
             <Link to="/" className="flex items-center gap-3">
               <img
                 src={ASSETS.logo}
@@ -27,6 +27,37 @@ export const Footer = () => {
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
               Your all-in-one platform for verified, professional home services. Handymen, cleaners, plumbers, and more, right at your doorstep.
             </p>
+
+            {/* Quick Contact Helplines List */}
+            <div className="pt-2 space-y-1.5 text-xs text-slate-300">
+              <div className="flex items-center gap-2">
+                <span className="text-slate-400">☎️ Helpline:</span>
+                <a href="tel:8796612243" className="font-bold text-white hover:text-primary transition-colors">8796612243</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-slate-400">📞 Booking:</span>
+                <a href="tel:8796612244" className="font-bold text-white hover:text-primary transition-colors">8796612244</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-slate-400">🚑 Emergency:</span>
+                <a href="tel:8796612245" className="font-bold text-red-400 hover:underline">8796612245</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-slate-400">📱 Official Line:</span>
+                <a href="tel:8860036008" className="font-bold text-white hover:text-primary">8860036008</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-slate-400">💬 WhatsApp:</span>
+                <a href="https://wa.me/918796612246" target="_blank" rel="noopener noreferrer" className="font-bold text-emerald-400 hover:underline">8796612246</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-slate-400">✉️ Email:</span>
+                <a href="mailto:NOROZZCARE@GMAIL.COM" className="font-bold text-teal-300 hover:underline">NOROZZCARE@GMAIL.COM</a>
+              </div>
+              <p className="text-[11px] text-slate-400 pt-1 leading-relaxed">
+                📍 5th Floor, DLF Bldg 2, Cyber Green, Sec 25, Gurgaon, Haryana 122002
+              </p>
+            </div>
           </div>
 
           {/* Col 2: Services */}
@@ -168,7 +199,7 @@ export const Footer = () => {
 
         {/* Bottom Bar: Copyright & Social Links */}
         <div className="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p>© 2026 Norozz Technologies Inc. All rights reserved.</p>
+          <p>© 2026 NOROZZ CARE PRIVATE LIMITED. All rights reserved.</p>
           <div className="flex items-center space-x-5 text-slate-400">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Facebook">
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
