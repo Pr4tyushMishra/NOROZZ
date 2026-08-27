@@ -24,6 +24,18 @@ export const Navbar = () => {
     setIsOpen(false);
   }, [location.pathname]);
 
+  // Prevent background scrolling when mobile menu is open (Body Scroll Lock)
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   const navLinks = [
     { label: 'Home', path: '/' },
     { label: 'Services', path: '/services' },
@@ -134,9 +146,18 @@ export const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer & Backdrop */}
       {isOpen && (
-        <div className="md:hidden bg-white border-b border-slate-200 px-6 pt-4 pb-6 space-y-4 shadow-xl animate-slide-up">
+        <>
+          {/* Backdrop overlay */}
+          <div
+            onClick={() => setIsOpen(false)}
+            className="fixed inset-0 top-20 bg-slate-900/40 backdrop-blur-xs z-30 md:hidden animate-fade-in"
+            aria-hidden="true"
+          />
+
+          {/* Drawer content */}
+          <div className="relative z-40 md:hidden bg-white border-b border-slate-200 px-6 pt-4 pb-6 space-y-4 shadow-xl animate-slide-up">
           <nav className="flex flex-col space-y-3">
             {navLinks.map((item) => (
               <NavLink
@@ -191,7 +212,8 @@ export const Navbar = () => {
             </a>
           </div>
         </div>
-      )}
+      </>
+    )}
     </header>
   );
 };
